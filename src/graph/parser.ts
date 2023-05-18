@@ -15,7 +15,7 @@ const DEFAULT_GRAPH_SETTINGS: GraphSettings = {
     bottom: -7,
     top: 7,
     grid: true,
-    polar: false
+    polar: false,
     degreeMode: DegreeMode.Radians,
     hideAxisNumbers: false,
 };

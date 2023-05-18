@@ -15,6 +15,7 @@ const DEFAULT_GRAPH_SETTINGS: GraphSettings = {
     bottom: -7,
     top: 7,
     grid: true,
+    polar: false
     degreeMode: DegreeMode.Radians,
     hideAxisNumbers: false,
 };
@@ -276,6 +277,7 @@ export class Graph {
                 switch (key) {
                     // Boolean fields
                     case "hideAxisNumbers":
+                    case "polar":
                     case "grid": {
                         if (!value) {
                             (graphSettings[key] as boolean) = true;
@@ -290,7 +292,7 @@ export class Graph {
                             (graphSettings[key] as boolean) = value === "true" ? true : false;
                         }
                         break;
-                    }
+                    }           
 
                     // String fields
                     case "xAxisLabel":

@@ -13,6 +13,8 @@ export interface GraphSettings {
     top: number;
     /** Whether to show the grid or not, defaults to `true` */
     grid: boolean;
+    /** Whether to use a polar grid (true) or a cartesian grid (false), defaults to `false`*/
+    polar: boolean;
     /** The degree mode to use for trigenometry functions, defaults to `radians` */
     degreeMode: DegreeMode;
     /** Whether to hide all axis numbers, defaults to `false` */

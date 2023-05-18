@@ -211,6 +211,14 @@ describe("parser", () => {
             graph = parseGraph({ settings: "grid=false" });
             expect(graph.settings.grid).to.equal(false);
         });
+        
+        it("polar", () => {
+            let graph = parseGraph({ settings: "polar" });
+            expect(graph.settings.polarMode).to.equal(false);
+
+            graph = parseGraph({ settings: "grid=true" });
+            expect(graph.settings.polarMode).to.equal(true);
+        });
 
         it("defaultColor", () => {
             const graph = parseGraph({ settings: "defaultColor=blue", equations: ["y=x|green", "y=2x"] });
